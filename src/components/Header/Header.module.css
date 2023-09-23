@@ -1,0 +1,9 @@
+.header {
+    background: var(--gray-700);
+}
+
+.header > img {
+    padding: 4.5rem 0 5rem 0;
+    display: block;
+    margin: auto;
+}

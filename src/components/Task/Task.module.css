@@ -1,0 +1,77 @@
+.task {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--gray-500);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 0.75rem;
+}
+
+.task + .task {
+    margin-top: 0.75rem;
+}
+
+.taskInfo {
+    width: calc(100% - 1.5rem);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.taskInfo label {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+}
+
+.taskInfo label span {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+    transition: border 0.1s, background-color 0.1s, background-url 0.15s;
+}
+
+.taskInfo label input:checked + span {
+    border: 2px solid var(--blue-dark);
+    background: var(--blue-dark) url(../../../assets/images/checkmark-icon.svg) center/70% no-repeat;
+}
+
+.taskInfo label input {
+    display: none;
+}
+
+.taskInfo span {
+    display: block;
+    word-wrap: break-word;
+    line-height: 1.4;
+    transition: color 0.1s, text-decoration 0.2s;
+}
+
+.taskUndoneText {
+    color: var(--gray-100);
+}
+
+.taskDoneText {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
+
+.deleteTask {
+    background: transparent;
+    border: 0;
+    color: var(--gray-300);
+    cursor: pointer;
+    transition: color 0.1s;
+    line-height: 0;
+    border-radius: 4px;
+}
+
+.deleteTask:hover {
+    color: var(--danger);
+}
+
